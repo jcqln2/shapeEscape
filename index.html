@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--
+    Shape Escape is a javascript game using svg animations and enemy spawning behaviour.
+    The player is a triangle that collects apples for a speed boost and avoids enemies (squares, triangles, or diamonds)
+    that chase them. The difficulty level affects enemy spawn rates, apple spawn rates, and enemy speed.
+
+    Inspired by geometry wars: https://en.wikipedia.org/wiki/Geometry_Wars 
+
+
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shape Escape</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.jpg">
+</head>
+
+<body>
+    <svg id="game" width="1600" height="600"></svg>
+    <div class="score" id="score">
+        Score: 0
+    </div>
+    <button class="start-btn" id="start-button">Start</button>
+    <div class="difficulty" id="difficulty">
+        Difficulty: <input type="range" id="difficulty-slider" min="0" max="2" value="1">
+    </div>
+    <div class="game-over" id="game-over">
+        Game Over
+        <p>
+            Score: <span id="final-score">0</span>
+        </p>
+        <p>
+            <button id="restart-button" class="start-btn">Restart</button>
+        <p>
+    </div>
+    <div class="instructions" id="instructions">
+        <h2>How to: Shape Escape</h2>
+        <p> 🔊 Sound on 🔊 </p>
+        <p>Use the arrow keys to move</p>
+        <p> Watch out for enemies! (squares, triangles, and diamonds)</p>
+        <p> Get the apples to go faster</p>
+
+    </div>
+    <audio loop id="music">
+        <source src="assets/gamemusic.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>

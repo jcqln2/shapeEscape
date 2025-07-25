@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    background: #1a1a1a;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#score {
+    /*I recognize it's bad practice to use absolute positioning but this made things easier to style*/
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00, 0 0 12px #00ff00;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#start-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    color: #ffffff;
+    background: radial-gradient(circle, #00ff00 0%, #00ffff 100%);
+    border: 3px solid #00ffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+#start-button:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+    background: radial-gradient(circle, #ff00ff 0%, #ff00cc 100%);
+    border-color: #ff00ff;
+    box-shadow: 0 6px 12px rgba(255, 0, 255, 0.4);
+}
+
+#difficulty {
+     /*I know it's bad practice to use absolute positioning but this made things easier for me*/
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #00ff00;
+    text-shadow: 0 0 6px #00ff00;
+    z-index: 10;
+}
+
+#difficulty-slider {
+    width: 200px;
+    accent-color: #00ffff;
+    margin-top: 10px;
+}
+
+#game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#restart-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    color: #ffffff;
+    background: radial-gradient(circle, #00ff00 0%, #00ffff 100%);
+    border: 3px solid #00ffff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+#restart-button:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+    background: radial-gradient(circle, #ff00ff 0%, #ff00cc 100%);
+    border-color: #ff00ff;
+    box-shadow: 0 6px 12px rgba(255, 0, 255, 0.4);
+}
+
+#game {
+    filter: drop-shadow(0 0 8px #00ffff);
+    padding: 20px;
+    box-sizing: content-box;
+    width: 1400px;
+    height: 600px;
+    display: block;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+.border {
+    stroke: #00ffff;
+    stroke-width: 5;
+    filter: drop-shadow(0 0 12px #00ffff);
+}
+
+.player {
+    stroke: #00ffff;
+    stroke-width: 3;
+    fill: none;
+}
+
+.square,
+.triangle,
+.diamond {
+    stroke: #ff00ff;
+    stroke-width: 3;
+    fill: none;
+}
+
+.apple {
+    stroke: #ff0000;
+    stroke-width: 3;
+    fill: none;
+}
+
+.apple-stem {
+    stroke: #00ff00;
+    stroke-width: 3;
+}
+
+.instructions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 191, 255, 0.9);
+    color: black;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
